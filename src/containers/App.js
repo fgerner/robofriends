@@ -5,21 +5,8 @@ import Scroll from '../components/Scroll';
 import './App.css';
 
 function App() {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         robots: [],
-    //         searchfield: ''
-    //     }
-    // }
     const [robots, setRobots] = useState([])
     const [searchField, setSearchField] = useState('')
-
-    // componentDidMount() {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then(response => response.json())
-    //         .then(users => this.setState({robots: users}));
-    // }
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
