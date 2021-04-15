@@ -20,8 +20,7 @@ export const searchRobots = (state = initialStateSearch, action = {}) => {
 
 const initialStateRobots = {
     isPending: false,
-    robots: [],
-    error: ''
+    robots: []
 }
 
 export const requestRobots = (state = initialStateRobots, action = {}) => {
@@ -33,7 +32,7 @@ export const requestRobots = (state = initialStateRobots, action = {}) => {
             return Object.assign({}, state, {robots: action.payload, isPending: false});
 
         case REQUEST_ROBOTS_FAIL:
-            return Object.assign({}, state, {error: action.payload, isPending: false});
+            return Object.assign({}, state, {error: action.error, isPending: false});
 
         default:
             return state;
